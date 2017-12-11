@@ -3,6 +3,8 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.integer('provider_id').notNullable().references('id').inTable('providers');
     table.integer('patient_id').notNullable().references('id').inTable('patients');
+    table.string('chief_complaint').notNullable();
+    table.text('illness_description').notNullable();
     table.timestamp('appt_date').notNullable();
     table.timestamps(true, true);
   });

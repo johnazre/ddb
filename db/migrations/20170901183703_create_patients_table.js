@@ -4,9 +4,9 @@ exports.up = function(knex, Promise) {
     table.string('name');
     table.string('phone');
     table.string('gender');
-    table.string('birthday');
+    table.string('birthdate');
     table.boolean('enrolled');
-    table.string('photo_url');
+    table.string('picture');
     table.timestamps(true, true);
   });
 };
