@@ -4,12 +4,13 @@ var knex = require('../db/knex')
 var populate = require('../lib')
 var chain = require('../lib/chain')
 
-/* GET all appoitments. */
+/* GET all appointments. */
 router.get('/', function(req, res, next) {
   chain(knex, 'appointments')
     .find()
     .populate('providers', 'provider_id', 'provider')
     .populate('patients', 'patient_id', 'patient')
+    .orderBy('appt_date', req.query.filter)
     .exec()
     .then(results => res.send(results))
     .catch(err => console.log('err', err))
