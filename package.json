@@ -24,7 +24,5 @@
     "pg": "^6.1.5",
     "serve-favicon": "~2.4.2"
   },
-  "devDependencies": {
-    "dotenv": "^4.0.0"
-  }
+  "devDependencies": {}
 }

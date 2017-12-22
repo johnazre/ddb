@@ -1,8 +1,7 @@
-require('dotenv').config();
 module.exports = {
   development: {
       client: 'pg',
-      connection: process.env.DEV_DB,
+      connection: 'postgres://localhost/dialdocs',
       migrations: {
           directory: __dirname + '/db/migrations',
         },
