@@ -41,7 +41,7 @@ router.post('/login', requireSignin, function(req, res) {
 function tokenForUser(user) {
   console.log('user in tokenForUser', user);
   const timestamp = new Date().getTime()
-  return jwt.encode({ sub: user.id, iat: timestamp }, process.env.SECRET_STRING)
+  return jwt.encode({ sub: user.id, iat: timestamp }, 'floobadoo')
 }
 
 module.exports = router;
